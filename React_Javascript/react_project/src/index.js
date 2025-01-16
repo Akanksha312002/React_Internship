@@ -3,23 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+
+import{BrowserRouter, Routes, Route} from 'react-router-dom';
 import HomePage from './Pages/HomePage';
 import AboutUsPage from './Pages/AboutUsPage';
 import ContactUsPage from './Pages/ContactUsPage';
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    
-        <Routes>
-          <Route path='home' element={<HomePage/>}/>
-          <Route path='aboutus' element={<AboutUsPage/>}/>
-          <Route path='contactus' element={<ContactUsPage/>}/>
-        </Routes>
-    
+    <Routes>
+      <Route path='home' element={<HomePage/>}/>
+      <Route path='contactus' element={<AboutUsPage/>}/>
+      <Route path='aboutus' element={<ContactUsPage/>}/>
+    </Routes>
     </BrowserRouter>
   </React.StrictMode>
 );
